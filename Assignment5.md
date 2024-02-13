@@ -1,0 +1,91 @@
+---
+date: 2024-02-13
+output: pdf_document
+title: Assignment 5
+---
+
+`{r setup, include=FALSE} knitr::opts_chunk$set(echo = TRUE)`
+
+**1. Write out as specifically as possible one example of how
+self-fulfilling-prophecy mechanism identified in the Glover et
+al. reading from last week may be affecting USPTO work.**
+
+An example of how a self-fulfilling prophecy mechanism might affect
+USPTO work involves the perception of an examiner's capability or skill
+based on their background or experience level. If management or
+colleagues presuppose that newer or less experienced examiners are less
+capable of handling complex patent applications, this belief could lead
+to these examiners receiving less challenging work or fewer
+opportunities for professional development. This situation could then
+limit their growth and reinforce the initial perception of their
+capabilities, since by never receiving challenging work, they'll never
+learn how to adapt to said work and complete it well. This could impact
+their job satisfaction, performance, and likelihood to stay with the
+USPTO.
+
+**2. Propose an embedding-based measure to evaluate the presence of the
+mechanism you have identified.**
+
+Firstly, we can use text embeddings to represent the language and
+content of patent applications, examiner decisions, and justifications
+for those decisions. This could be achieved using advanced NLP models
+like BERT or GPT to capture semantic similarities in the text data. You
+can use these embeddings to convert the textual content of patent
+applications, examiner decisions, and any subsequent appeals into
+high-dimensional vector space representations. This process allows for
+capturing the semantic essence of documents. Then, we can analyze the
+assignments of patent applications to examiners based on the complexity
+and subject areas of the applications, using embeddings to assess the
+match or mismatch in complexity and examiner expertise or experience
+level. This can be done by firstly calculating the similarity scores
+between the embeddings of examiner decisions and the initial patent
+applications. Next, we can examine the relationship between the
+similarity scores and the examiners' backgrounds or experience levels.
+The hypothesis is that if self-fulfilling prophecies are at play, there
+may be a noticeable pattern where certain examiners are consistently
+assigned applications that align with presumptions about their
+capabilities. Lastly, we can analyze the outcomes of applications
+(accepted vs. rejected) in relation to examiner experience and the
+similarity measures. This can help to reveal if less experienced
+examiners, who are presumed to handle less complex applications due to
+self-fulfilling prophecies, have different outcomes compared to more
+experienced examiners.
+
+**3. Propose a way to use an LLM at the USPTO to reduce inequality that
+may result from the mechanism you have identified in #1. Be as specific
+as possible in your description of the application. This solution may or
+may not need an embedding-based solution you have identified in #2
+(i.e., you don't have to use it here).**
+
+To address our identified self-fulfilling prophecy mechanism at the
+USPTO, an LLM could be used to create a Decision Support and Application
+Matching System (DSAMS). This system would leverage the LLM's capability
+to understand and process complex technical language, providing
+functionalities such as:
+
+-   Blind Assignment of Patent Applications: DSAMS would anonymize and
+    assess the complexity of incoming patent applications, assigning
+    them to examiners based on their skill level and learning needs
+    rather than perceived capabilities. This ensures that all examiners
+    receive a mix of application complexities, facilitating growth and
+    development.
+-   Skill Development Tracking: Utilize the LLM to monitor the progress
+    and performance of examiners on various complexity levels of patent
+    applications. This data would be used to identify skill gaps and
+    recommend personalized training or mentorship programs, ensuring
+    examiners are equipped to handle more complex applications over
+    time.
+-   Bias Monitoring in Decision-Making: DSAMS could analyze decision
+    letters and feedback provided by examiners for patterns indicating
+    bias or unequal treatment of applications. This analysis would help
+    in providing feedback to examiners to ensure fairness and
+    consistency in application assessments.
+-   Automated Feedback and Learning Resources: Based on the types of
+    applications an examiner struggles with, DSAMS could provide
+    targeted learning resources or suggest specific patents to review as
+    examples, facilitating on-the-job learning and development.
+
+By implementing such a system, the USPTO could mitigate the effects of
+self-fulfilling prophecies related to examiner experience and
+background, promoting a more equitable and supportive work environment
+that encourages growth and reduces turnover.
